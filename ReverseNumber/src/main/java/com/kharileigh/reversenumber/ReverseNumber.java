@@ -1,11 +1,12 @@
-
-
-package com.kharileigh.reversenumber;
-
 /**
  *
  * @author kharileigh
+ * <------ REVERSE A GIVEN NUMBER ----->
  */
+
+package com.kharileigh.reversenumber;
+
+
 public class ReverseNumber {
 
     public static void main(String[] args) {

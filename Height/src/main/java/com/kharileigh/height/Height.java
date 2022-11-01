@@ -17,8 +17,6 @@ public class Height {
         Scanner sc = new Scanner(System.in);
         
         
-        
-        
         // ASK USER FOR FIRST THEIR HEIGHT - feet
         System.out.println("What is your height in feet?");
         String input1 = sc.nextLine();

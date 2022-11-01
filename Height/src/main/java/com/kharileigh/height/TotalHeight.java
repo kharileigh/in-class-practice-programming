@@ -34,6 +34,8 @@ public class TotalHeight {
         super();
     }
     
+    
+    //-------- CONSTRUCTOR -- SETS INPUTS VALUES INTO OBJECT WHEN INSTANTIATED
     public TotalHeight (int feet, int inch) {
         super();
         this.feet = feet;

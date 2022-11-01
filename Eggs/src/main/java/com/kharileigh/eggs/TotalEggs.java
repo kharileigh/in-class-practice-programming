@@ -9,11 +9,12 @@ package com.kharileigh.eggs;
 public class TotalEggs {
     
     
-    // DECLARE VARIABLES NEEDED
+    //--------- DECLARE VARIABLES NEEDED
     private int totalEggs, grossEggs, dozenEggs, remainingEggs;
 
     
-    // user will input total eggs
+    
+    //-------- USER WILL INPUT TOTAL EGGS
     public void setTotalEggs(int totalEggs) {
         this.totalEggs = totalEggs;
     }
@@ -32,7 +33,8 @@ public class TotalEggs {
         return dozenEggs;
     }
 
-    // get remainder of gross & dozen, add both remainders to get remaining eggs
+    
+    //-------- ADD GROSS REMAINDER & DOZEN REMAINDER TO GET TOTAL REMAINING EGGS USING MODULO
     public int getRemainingEggs() {
         
         remainingEggs = (totalEggs % 144) + (totalEggs % 12);

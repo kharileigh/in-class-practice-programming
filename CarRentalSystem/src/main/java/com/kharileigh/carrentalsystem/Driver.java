@@ -1,6 +1,7 @@
 /**
  *
  * @author kharileigh
+ * <------- GENERAL CLASS REFERENCING BASE CLASS -------->
  */
 
 package com.kharileigh.carrentalsystem;

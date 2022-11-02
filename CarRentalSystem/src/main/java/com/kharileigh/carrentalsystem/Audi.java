@@ -1,6 +1,7 @@
 /**
  *
  * @author kharileigh
+ * <------- CHILD CLASS EXTENDING BASE CLASS ----->
  */
 
 package com.kharileigh.carrentalsystem;

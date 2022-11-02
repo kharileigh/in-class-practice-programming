@@ -37,6 +37,7 @@ public class Road {
         
         
         //----- CREATE NEW CAR OBJECT WITH ALL DETAILS
+        //----- call method that sets values for new object
         Car newCar = new Car();
         newCar.carSpec(model, color, price, gas, numOfDoors);
         

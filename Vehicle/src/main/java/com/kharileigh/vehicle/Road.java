@@ -38,6 +38,7 @@ public class Road {
         
         //----- CREATE NEW CAR OBJECT WITH ALL DETAILS
         Car newCar = new Car();
+        newCar.carSpec(model, color, price, gas, numOfDoors);
         
         //------ PRINT FULL SPECIFICATIONS TO USER
         System.out.println("\n ======= FULL CAR SPECIFICATIONS ======\n");

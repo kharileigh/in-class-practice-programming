@@ -25,8 +25,8 @@ public class Vehicle {
     //------ METHOD DISPLAYS VEHICLE SPECIFICATIONS
     public void displayCarSpec(){
         System.out.println("Model : " + model);
-        System.out.println("Type of Gas Used: " + gas);
         System.out.println("Cost : " + price);
+        System.out.println("Type of Gas Used: " + gas);
     }
 
     //------- GETTERS 

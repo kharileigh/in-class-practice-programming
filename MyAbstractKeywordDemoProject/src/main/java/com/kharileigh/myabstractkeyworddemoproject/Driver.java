@@ -4,7 +4,7 @@
  * <------- GENERAL CLASS REFERENCING BASE CLASS CAR -------->
  */
 
-package com.kharileigh.carrentalsystem;
+package com.kharileigh.myabstractkeyworddemoproject;
 
 
 public class Driver {

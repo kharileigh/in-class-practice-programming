@@ -5,7 +5,7 @@
  * <----- GENERAL CLASS IS USED BY DIFFERENT CHILD CLASSES TO SET DIFFERENT USERS OF SAID CLASS ----->
  */
 
-package com.kharileigh.carrentalsystem;
+package com.kharileigh.myabstractkeyworddemoproject;
 
 
 public class CarRentalSystem {

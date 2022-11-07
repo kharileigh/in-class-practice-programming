@@ -45,5 +45,22 @@ public class StudentList {
     
     }
     
+    /*
+    //throwing exception if repeated rollNo entered
+    public void comparingRollNo(Student student, int index) 
+            throws RollNoException {
+
+        int currentRollNo = studentArr[index].getRollNo();
+
+        for(int i=0; i<index; i++) {
+            if(currentRollNo == studentArr[i].getRollNo()) {
+                throw new RollNoException("No repeated Roll numbers, "
+                        + "please try again");
+            }
+        }
+    }
+    
+    */
+    
     
 }

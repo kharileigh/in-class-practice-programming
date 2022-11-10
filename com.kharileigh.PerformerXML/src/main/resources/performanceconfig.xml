@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:aop="http://www.springframework.org/schema/aop"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-          http://www.springframework.org/schema/beans/spring-beans.xsd
-          http://www.springframework.org/schema/mvc
-          http://www.springframework.org/schema/mvc/spring-mvc.xsd
-          http://www.springframework.org/schema/tx
-          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
-          http://www.springframework.org/schema/context
-          http://www.springframework.org/schema/context/spring-context.xsd
-          http://www.springframework.org/schema/aop  
-          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- Bean definitions go here -->
-    <bean id="dao" class="com.sujata.persistence.EmployeeDaoImpl"></bean>
+	<!-- Setter Injection -->
+	<bean id="Laura" class="com.kharileigh.componentproducer.Juggler">
+		<property name="balls" value="5"></property>
+	</bean>
 
-    <!-- Constructor Injection : SERVICE -->
-    <bean id="service" class="com.sujata.service.EmployeeServiceImpl">
-            <constructor-arg name="employeeDao" ref="dao"></constructor-arg>
-    </bean>
-
-    <!-- Setter Injection -->
-    <bean id="empPresentation" class="com.sujata.presentation.EmployeePresentationImpl">
-            <property name="employeeService" ref="service"></property>
-    </bean>
-    
+	<bean id="Steph" class="com.kharileigh.componentproducer.Dancer">
+		<property name="style" value="Salsa"></property>
+	</bean>
+	
+	<bean id="Vic" class="com.kharileigh.componentproducer.Dancer">
+	<property name="style" value="Moon Walk"></property>
+	</bean>
+	
+	<!-- Constructor Injection -->
+	<bean id="Gemma" class="com.kharileigh.componentproducer.Singer">
+		<constructor-arg name="song" value="Baby Go Back"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="Maria" class="com.kharileigh.componentproducer.Musician"></bean>
+	
 </beans>
-

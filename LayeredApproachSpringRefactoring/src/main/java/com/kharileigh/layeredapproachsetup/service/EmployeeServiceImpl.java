@@ -19,14 +19,8 @@ import java.util.List;
 
 public class EmployeeServiceImpl implements EmployeeService {
     
-        //Service will request persistence layer for all data needs
-	private EmployeeDao employeeDao;
-        
-        //--- ARGS CONSTRUCTOR (passing DAO as argument) -- USED BY CONFIGURATION FILE
-        public EmployeeServiceImpl(EmployeeDao employee) {
-            super();
-            this.employeeDao = employeeDao;
-        }
+    //Service will request persistence layer for all data needs
+	private EmployeeDao employeeDao=new EmployeeDaoImpl();
 	
 	@Override
 	public Collection<Employee> getAllEmployees() {

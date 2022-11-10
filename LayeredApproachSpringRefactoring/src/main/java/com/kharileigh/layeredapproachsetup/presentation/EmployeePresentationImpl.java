@@ -18,12 +18,7 @@ import com.kharileigh.layeredapproachsetup.service.EmployeeServiceImpl;
 public class EmployeePresentationImpl implements EmployeePresentation {
     
     //Presentation will pass the request to service for processing and gives response to client
-	private EmployeeService employeeService;
-        
-        // SETTER METHOD -- USED BY CONFIGURATION FILE 
-        public void setEmployeeService(EmployeeService employeeService) {
-            this.employeeService = employeeService;
-        }
+	private EmployeeService employeeService=new EmployeeServiceImpl();
 	
 	@Override
 	public void showMenu() {

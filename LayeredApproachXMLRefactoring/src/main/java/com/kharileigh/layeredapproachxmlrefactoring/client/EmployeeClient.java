@@ -4,12 +4,13 @@
  * <----- 
  */
 
-package com.kharileigh.layeredapproachsetup.client;
+package com.kharileigh.layeredapproachxmlrefactoring.client;
 
 import java.util.Scanner;
 
-import com.kharileigh.layeredapproachsetup.presentation.EmployeePresentation;
-import com.kharileigh.layeredapproachsetup.presentation.EmployeePresentationImpl;
+import com.kharileigh.layeredapproachxmlrefactoring.presentation.EmployeePresentation;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class EmployeeClient {
 
@@ -17,7 +18,9 @@ public class EmployeeClient {
         
         Scanner scanner=new Scanner(System.in);
 		
-		EmployeePresentation employeePresentation=new EmployeePresentationImpl();
+                ApplicationContext springContainer = new ClassPathXmlApplicationContext("employeeconfiguration.xml");
+                
+		EmployeePresentation employeePresentation = (EmployeePresentation) springContainer.getBean("employeePresentation");
 		
 		while(true) {
 			employeePresentation.showMenu();

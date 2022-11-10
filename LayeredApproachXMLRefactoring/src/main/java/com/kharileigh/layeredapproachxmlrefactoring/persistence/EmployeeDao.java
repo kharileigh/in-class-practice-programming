@@ -2,9 +2,9 @@
  *
  * @author kharileigh
  */
-package com.kharileigh.layeredapproachsetup.persistence;
+package com.kharileigh.layeredapproachxmlrefactoring.persistence;
 
-import com.kharileigh.layeredapproachsetup.entity.Employee;
+import com.kharileigh.layeredapproachxmlrefactoring.entity.Employee;
 import java.util.Collection;
 
 

@@ -4,14 +4,14 @@
  * <----- CREATES DAO OBJECT TO TELL GET RETRIEVE/ADD DATA TO DATABASE ------>
  */
 
-package com.kharileigh.layeredapproachsetup.service;
+package com.kharileigh.layeredapproachxmlrefactoring.service;
 
 import java.util.Collection;
 
-import com.kharileigh.layeredapproachsetup.entity.Employee;
-import com.kharileigh.layeredapproachsetup.entity.EmployeePaySlip;
-import com.kharileigh.layeredapproachsetup.persistence.EmployeeDao;
-import com.kharileigh.layeredapproachsetup.persistence.EmployeeDaoImpl;
+import com.kharileigh.layeredapproachxmlrefactoring.entity.Employee;
+import com.kharileigh.layeredapproachxmlrefactoring.entity.EmployeePaySlip;
+import com.kharileigh.layeredapproachxmlrefactoring.persistence.EmployeeDao;
+import com.kharileigh.layeredapproachxmlrefactoring.persistence.EmployeeDaoImpl;
 import java.util.ArrayList;
 import java.util.List;
 

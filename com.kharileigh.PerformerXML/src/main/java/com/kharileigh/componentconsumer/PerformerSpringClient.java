@@ -15,7 +15,7 @@ public class PerformerSpringClient {
 
     public static void main(String[] args) {
         
-        ApplicationContext springContainer = new ClassPathXmlApplicationContext("performance.xml");
+        ApplicationContext springContainer = new ClassPathXmlApplicationContext("performanceconfig.xml");
         
         Performer performer1=(Performer)springContainer.getBean("Steph");
         performer1.perform();

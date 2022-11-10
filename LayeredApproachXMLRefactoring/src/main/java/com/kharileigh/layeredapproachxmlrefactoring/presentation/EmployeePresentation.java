@@ -4,7 +4,7 @@
  * <----- STEP 6 : INTERACTS DIRECTLY WITH USER ----->
  */
 
-package com.kharileigh.layeredapproachsetup.presentation;
+package com.kharileigh.layeredapproachxmlrefactoring.presentation;
 
 
 public interface EmployeePresentation {

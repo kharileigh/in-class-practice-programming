@@ -5,12 +5,12 @@
  * 
  */
 
-package com.kharileigh.layeredapproachsetup.service;
+package com.kharileigh.layeredapproachxmlrefactoring.service;
 
 import java.util.Collection;
 
-import com.kharileigh.layeredapproachsetup.entity.Employee;
-import com.kharileigh.layeredapproachsetup.entity.EmployeePaySlip;
+import com.kharileigh.layeredapproachxmlrefactoring.entity.Employee;
+import com.kharileigh.layeredapproachxmlrefactoring.entity.EmployeePaySlip;
 import java.util.List;
 
 

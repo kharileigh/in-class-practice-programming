@@ -4,9 +4,9 @@
  * <------ STEP 2 : BLUEPRINT OF DATABASE (EmployeeList) ----->
  * <------ STEP 3 : MIMIC DATABASE - map of Employee object & put into EmployeeList ----->
  */
-package com.kharileigh.layeredapproachsetup.database;
+package com.kharileigh.layeredapproachxmlrefactoring.database;
 
-import com.kharileigh.layeredapproachsetup.entity.Employee;
+import com.kharileigh.layeredapproachxmlrefactoring.entity.Employee;
 import java.util.LinkedHashMap;
 import java.util.Map;
 

@@ -4,15 +4,15 @@
  * 
  */
 
-package com.kharileigh.layeredapproachsetup.presentation;
+package com.kharileigh.layeredapproachxmlrefactoring.presentation;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
-import com.kharileigh.layeredapproachsetup.entity.Employee;
-import com.kharileigh.layeredapproachsetup.entity.EmployeePaySlip;
-import com.kharileigh.layeredapproachsetup.service.EmployeeService;
+import com.kharileigh.layeredapproachxmlrefactoring.entity.Employee;
+import com.kharileigh.layeredapproachxmlrefactoring.entity.EmployeePaySlip;
+import com.kharileigh.layeredapproachxmlrefactoring.service.EmployeeService;
 
 
 public class EmployeePresentationImpl implements EmployeePresentation {

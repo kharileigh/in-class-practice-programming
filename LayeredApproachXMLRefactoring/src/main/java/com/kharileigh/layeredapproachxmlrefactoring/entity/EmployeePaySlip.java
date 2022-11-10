@@ -4,7 +4,7 @@
  * <------ POJO USED TO RETURN VALUES ----->
  */
 
-package com.kharileigh.layeredapproachsetup.entity;
+package com.kharileigh.layeredapproachxmlrefactoring.entity;
 
 
 public class EmployeePaySlip {

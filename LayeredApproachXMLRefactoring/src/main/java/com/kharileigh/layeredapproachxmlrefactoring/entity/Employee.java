@@ -4,7 +4,7 @@
  * <------ 1st STEP : CREATE POJO - encapsulated entity - getters & setters / lombok API -------->
  * 
  */
-package com.kharileigh.layeredapproachsetup.entity;
+package com.kharileigh.layeredapproachxmlrefactoring.entity;
 
 
 public class Employee {

@@ -1,7 +1,7 @@
 /**
  *
  * @author kharileigh
- * <----- INTERACTS DIRECTLY WITH USER ----->
+ * <----- STEP 6 : INTERACTS DIRECTLY WITH USER ----->
  */
 
 package com.kharileigh.layeredapproachsetup.presentation;

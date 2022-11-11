@@ -16,7 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("bkPresentation")
+@Component("bookPresentation")
 public class BookPresentationImpl implements BookPresentation {
     
     //Presentation will pass the request to service for processing and gives response to client

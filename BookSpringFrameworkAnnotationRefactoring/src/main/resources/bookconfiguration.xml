@@ -12,7 +12,7 @@
     </bean>
     
     <!-- Setter Injection -->
-    <bean id="bkPresentation" class="com.kharileigh.bookannotationrefactoring.presentation.BookPresentationImpl">
+    <bean id="bookPresentation" class="com.kharileigh.bookannotationrefactoring.presentation.BookPresentationImpl">
         <property name="bookService" ref="service"></property>
     </bean>
    

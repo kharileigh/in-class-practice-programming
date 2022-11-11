@@ -9,9 +9,9 @@ package com.kharileigh.bookannotationrefactoring.persistence;
 import com.kharileigh.bookannotationrefactoring.database.BookDatabase;
 import com.kharileigh.bookannotationrefactoring.entity.Book;
 import java.util.Collection;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component("dao")
+@Repository("dao")
 public class BookDaoImpl implements BookDao {
 
     @Override

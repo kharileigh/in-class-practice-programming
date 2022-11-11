@@ -7,7 +7,6 @@
 package com.kharileigh.bookannotationrefactoring.client;
 
 import com.kharileigh.bookannotationrefactoring.presentation.BookPresentation;
-import com.kharileigh.bookannotationrefactoring.presentation.BookPresentationImpl;
 
 import java.util.Scanner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -20,7 +19,7 @@ public class BookSpringFramework {
         
         AnnotationConfigApplicationContext springContainer = new AnnotationConfigApplicationContext(BookConfiguration.class);
         
-        BookPresentation bookPresentation = (BookPresentation)springContainer.getBean("bkPresentaion");
+        BookPresentation bookPresentation = (BookPresentation)springContainer.getBean("bookPresentation");
         
         while(true) {
             

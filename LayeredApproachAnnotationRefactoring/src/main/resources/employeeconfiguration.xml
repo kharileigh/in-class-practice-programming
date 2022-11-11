@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definitions go here -->
+    <bean id="dao" class="com.kharileigh.layeredapproachannotation.persistence.EmployeeDaoImpl"></bean>
+    
+    <!-- Constructor Injection : SERVICE -->
+    <bean id="service" class="com.kharileigh.layeredapproachannotation.service.EmployeeServiceImpl">
+        <constructor-arg name="employeeDao" ref="dao"></constructor-arg>
+    </bean>
+    
+    <!-- Setter Injection -->
+    <bean id="employeePresentation" class="com.kharileigh.layeredapproachannotation.presentation.EmployeePresentationImpl">
+        <property name="employeeService" ref="service"></property>
+    </bean>
+   
+</beans>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dao" class="com.kharileigh.studentbeansconfig.persistence.EmployeeDaoImpl"></bean>
+	
+	<bean id="service" class="com.kharileigh.studentbeansconfig.service.EmployeeServiceImpl">
+		<constructor-arg name="bookDao" ref="dao"></constructor-arg>
+	</bean>
+	
+	<bean id="studentPresentation" class="com.kharileigh.studentbeansconfig.presentation.EmployeePresentationImpl">
+		<property name="studentService" ref="service"></property>
+	</bean>
+
+</beans>

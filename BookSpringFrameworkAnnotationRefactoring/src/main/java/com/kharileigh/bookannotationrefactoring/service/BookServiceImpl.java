@@ -8,6 +8,7 @@ package com.kharileigh.bookannotationrefactoring.service;
 import com.kharileigh.bookannotationrefactoring.entity.Book;
 import com.kharileigh.bookannotationrefactoring.persistence.BookDao;
 import java.util.Collection;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component("service")
@@ -16,7 +17,7 @@ public class BookServiceImpl implements BookService {
     private BookDao bookDao;
     
     // ARGS CONSTRUCTOR USING DAO AS ARGUMENT
-    public BookServiceImpl(BookDao bookDao) {
+    public BookServiceImpl(@Autowired BookDao bookDao) {
         this.bookDao = bookDao;
     }
 

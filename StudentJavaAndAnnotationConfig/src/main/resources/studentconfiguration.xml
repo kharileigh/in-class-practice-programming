@@ -3,13 +3,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="dao" class="com.kharileigh.studentjavaannotationconfig.persistence.EmployeeDaoImpl"></bean>
+	<bean id="dao" class="com.kharileigh.studentjavaannotationconfig.persistence.StudentDaoImpl"></bean>
 	
-	<bean id="service" class="com.kharileigh.studentjavaannotationconfig.service.EmployeeServiceImpl">
+	<bean id="service" class="com.kharileigh.studentjavaannotationconfig.service.StudentServiceImpl">
 		<constructor-arg name="studentDao" ref="dao"></constructor-arg>
 	</bean>
 	
-	<bean id="studentPresentation" class="com.kharileigh.studentjavaannotationconfig.presentation.EmployeePresentationImpl">
+	<bean id="studentPresentation" class="com.kharileigh.studentjavaannotationconfig.presentation.StudentPresentationImpl">
 		<property name="studentService" ref="service"></property>
 	</bean>
 

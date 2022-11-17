@@ -1,7 +1,7 @@
 /**
  *
  * @author kharileigh
- *  <------ Data Query Language QUERY ------>
+ *  <------ Data Management Language QUERY ------>
  */
 
 package com.kharileigh.myfirstjdbcproject;
@@ -9,61 +9,81 @@ package com.kharileigh.myfirstjdbcproject;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 
 public class MyFirstJDBCProject {
 
     public static void main(String[] args) {
         
-        Connection connection=null;
+        Connection connection = null;
         PreparedStatement preparedStatement;
+        Scanner scanner = new Scanner(System.in);
 
         try {
-//			1. Connect
-//			1.1 Register Driver
+                // 1. Connect
+                // 1.1 Register Driver
                 Class.forName("com.mysql.cj.jdbc.Driver");
 
-//			1.2 Connect to the Database
+                
+                // 1.2 CONNECT TO DATABASE
                 connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wileydi001", "root", "cec1l3r0y!");
 
-//			2. Query
-                preparedStatement=connection.prepareStatement("SELECT * FROM EMPLOYEE");
+                
+                // 2. DML QUERY
+                preparedStatement = connection.prepareStatement("INSERT INTO EMPLOYEE(?, ?, ?, ?, ?)");
 
-                //DQL : executeQuery() , which will result ResultSet
-                ResultSet resultSet= preparedStatement.executeQuery();
+                System.out.println("Enter Employee ID : ");
+                preparedStatement.setInt(1, scanner.nextInt());
 
-//			3. Process The result
-                while(resultSet.next()) {
-                        //read int type "employeeid" column from employee table 
-                        int id=resultSet.getInt("EMPLOYEEID");
-                        //read varchar type "name" column from employee table
-                        String name=resultSet.getString("NAME");
-                        //read varchar type "designation" column from employee table
-                        String desig=resultSet.getString("DESIGNATION");
-                        //read varchar type "department" column from employee table
-                        String deptt=resultSet.getString("DEPARTMENT");
-                        //read double type "salary" column from employee table
-                        double sal=resultSet.getDouble("SALARY");
+                System.out.println("Enter Employee Name : ");
+                preparedStatement.setString(2, scanner.next());
 
-                        //displaying result  
-                        System.out.println(id+" "+name+" "+desig+" "+deptt+" "+sal);
+                System.out.println("Enter Employee Designation : ");
+                preparedStatement.setString(3, scanner.next());
+
+                System.out.println("Enter Employee Department : ");
+                preparedStatement.setString(4, scanner.next());
+
+                System.out.println("Enter Employee Salary : ");
+                preparedStatement.setDouble(5, scanner.nextDouble());
+
+                
+                //DMLL : executeUpdate() , counts number of rows manipulated by query
+                int rows = preparedStatement.executeUpdate();
+
+                
+                // 3. PROCESS RESULTS
+                if (rows > 0) {
+                    
+                    System.out.println("Employee ADDED");
+                    
+                } else {
+                       
+                    System.out.println("Employee NOT ADDED");
                 }
+                
 
         } catch (ClassNotFoundException e) {
+            
                 //displaying the complete stack for exceptions
                 e.printStackTrace();
-        }
-        catch(SQLException e) {
+                
+        } catch(SQLException e) {
+            
                 e.printStackTrace();
-        }
-        finally {
+                
+        } finally {
+            
                 try {
-//				4.Close
+                
+                        // 4.CLOSE CONNECTION
                         connection.close();
+                        
                 } catch (SQLException e) {
-                        // TODO Auto-generated catch block
+                    
+                        // TODO : Auto-generated catch block
                         e.printStackTrace();
                 }
         }

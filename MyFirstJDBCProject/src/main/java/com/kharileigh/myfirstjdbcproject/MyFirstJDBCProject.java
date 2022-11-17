@@ -32,7 +32,7 @@ public class MyFirstJDBCProject {
 
                 
                 // 2. DML QUERY
-                preparedStatement = connection.prepareStatement("INSERT INTO EMPLOYEE(?, ?, ?, ?, ?)");
+                preparedStatement = connection.prepareStatement("INSERT INTO EMPLOYEE VALUES (?, ?, ?, ?, ?)");
 
                 System.out.println("Enter Employee ID : ");
                 preparedStatement.setInt(1, scanner.nextInt());

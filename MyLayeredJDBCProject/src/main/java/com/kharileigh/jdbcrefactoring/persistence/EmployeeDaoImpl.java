@@ -34,7 +34,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
         try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
 
-                connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wileydi001", "root", "sujata");
+                connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wileydi001", "root", "cec1l3r0y!");
 
                 preparedStatement = connection.prepareStatement("SELECT * FROM EMPLOYEE");
 

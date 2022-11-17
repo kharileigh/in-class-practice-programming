@@ -13,7 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class MyFirstJDBCProject {
+public class MySecondJDBCProject {
 
     public static void main(String[] args) {
         

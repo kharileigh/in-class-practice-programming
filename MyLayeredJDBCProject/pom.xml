@@ -2,22 +2,34 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kharileigh</groupId>
-    <artifactId>MySecondJDBCProject</artifactId>
+    <artifactId>MyLayeredJDBCProject</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
-        <exec.mainClass>com.kharileigh.myfirstjdbcproject.MyFirstJDBCProject</exec.mainClass>
-    </properties>
+        <exec.mainClass>com.kharileigh.layeredapproachsetup.LayeredApproachSetUp</exec.mainClass>
+    </properties>   
     <dependencies>
+        <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <type>maven-plugin</type>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.31</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
-    <name>MySecondJDBCProject</name>
+    <name>MyLayeredJDBCProject</name>
 </project>

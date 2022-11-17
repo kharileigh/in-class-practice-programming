@@ -1,7 +1,7 @@
 /**
  *
  * @author kharileigh
- *  <--- 1 . CONNECT TO DRIVER (register driver & connect to driver)--->
+ *  <------ Data Query Language QUERY ------>
  */
 
 package com.kharileigh.myfirstjdbcproject;

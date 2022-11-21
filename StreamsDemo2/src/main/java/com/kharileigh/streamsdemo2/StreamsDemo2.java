@@ -21,6 +21,7 @@ public class StreamsDemo2 {
         numList.stream()
                 
         // TAKES 1 INPUT, CONVERTS FORMAT INTO ANOTHER, THEN RETURNS A TYPE
+        // if to display both positive & negative in array, use if statement
         .map((e) -> e * -1)
                 
         // DISPLAYS DATA

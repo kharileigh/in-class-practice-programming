@@ -40,10 +40,13 @@ public class BookDaoImplTest {
         assertEquals(1, dao.searchRecord(1).getBookId());
     }
     
+    // EXPECTED RESULT MUST MATCH RETURN TYPE (id)
     @Test
     void testInsertRecord() {
-        assertEquals(1, dao.insertRecord(new Book(120, "The Army Kid", "Moses", 50000)));
+    
+        assertEquals(4, dao.insertRecord(new Book(4, "The Army Kid", "Moses", 50000)).getBookId());
     }
+    
     
     /*
     @Test 

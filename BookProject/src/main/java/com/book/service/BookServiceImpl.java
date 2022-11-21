@@ -32,14 +32,13 @@ public class BookServiceImpl implements BookService {
     @Override
     public boolean addBook(Book book) {
         
-        if (bookDao.insertRecord(book) > 0) {
-            
-            return true;
-            
-        } else {
-            
+        Book bk = bookDao.searchRecord(book.getBookId());
+        
+        if (bk != null) {
             return false;
         }
+        bookDao.insertRecord(book);
+        return true;
     }
     
     

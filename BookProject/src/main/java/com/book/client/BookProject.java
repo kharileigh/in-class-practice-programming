@@ -10,7 +10,6 @@ import com.book.presentation.BookPresentation;
 import com.book.presentation.BookPresentationImpl;
 
 import java.util.Scanner;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class BookProject {
 

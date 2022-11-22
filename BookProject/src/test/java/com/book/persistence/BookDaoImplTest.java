@@ -20,29 +20,29 @@ public class BookDaoImplTest {
     BookDao dao;
     
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         dao = new BookDaoImpl();
     }
 
     @AfterEach
-    void tearDown() {
+    public void tearDown() {
         dao = null;
     }
     
     // list all books
     @Test
-    void testGetAllBooks () {
+    public void testGetAllBooks () {
         assertTrue(dao.getAllRecords().size() > 0);
     }
     
     @Test
-    void testSearchBooks() {
+    public void testSearchBooks() {
         assertEquals(1, dao.searchRecord(1).getBookId());
     }
     
     // EXPECTED RESULT MUST MATCH RETURN TYPE (id)
     @Test
-    void testInsertRecord() {
+    public void testInsertRecord() {
     
         assertEquals(4, dao.insertRecord(new Book(4, "The Army Kid", "Moses", 50000)).getBookId());
     }

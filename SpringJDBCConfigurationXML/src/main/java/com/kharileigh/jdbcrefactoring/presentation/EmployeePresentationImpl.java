@@ -9,10 +9,13 @@ package com.kharileigh.jdbcrefactoring.presentation;
 import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 
 import com.kharileigh.jdbcrefactoring.entity.Employee;
 import com.kharileigh.jdbcrefactoring.entity.EmployeePaySlip;
 import com.kharileigh.jdbcrefactoring.service.EmployeeService;
+import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -71,7 +74,12 @@ public class EmployeePresentationImpl implements EmployeePresentation {
 			newEmployee.setEmpDepartment(scanner.next());
 			System.out.println("Enter Employee Salary : ");
 			newEmployee.setEmpSalary(scanner.nextDouble());
+                        System.out.println("Enter Employee Date of Joining (dd-mm-yyyy) : ");
+                        
+                        DateTimeFormatter df = new DateTimeFormatterBuilder().parseCaseInsensitive().append(DateTimeFormatter.ofPattern("dd-mm-yyyy")).toFormatter();
 			
+                        newEmployee.setDateOfJoining(LocalDate.parse(scanner.next(), df));
+                        
 			if(employeeService.addEmployee(newEmployee))
 				System.out.println("Employee Record Added");
 			else

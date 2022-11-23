@@ -11,7 +11,7 @@ import java.util.Scanner;
 import com.kharileigh.jdbcrefactoring.presentation.EmployeePresentation;
 import com.kharileigh.jdbcrefactoring.presentation.EmployeePresentationImpl;
 
-public class LayeredApproachSetUp {
+public class ClientMain {
 
     public static void main(String[] args) {
         

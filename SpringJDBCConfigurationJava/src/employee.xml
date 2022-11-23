@@ -10,8 +10,12 @@
 	<context:component-scan
 		base-package="com.kharileigh"></context:component-scan>
                 
-            <!-- DriverManagerDataSource : is responsible for creating connection and handling ClassNotFound and SqlException -->
-            <bean id="mySqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+                   
+            <!-- Bean definitions go here -->
+            <bean id="dao" class="com.kharileigh.jdbcrefactoring.persistence.EmployeeDaoImpl">
+                
+                <!-- DriverManagerDataSource : is responsible for creating connection and handling ClassNotFound and SqlException -->
+                <bean id="mySqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
                     <!-- Replaces Class.forName in Dao Impl -->
                     <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
@@ -20,10 +24,29 @@
                     <property name="url" value="jdbc:mysql://127.0.0.1:3306/wileydi001"></property>
                     <property name="username" value="root"></property>
                     <property name="password" value="cec1l3r0y!"></property>
+                    
+                </bean>
+
+                <!-- JdbcTemplate: for creation of statements and execution and handling SQL Exception -->
+                <bean id="" class="org.springframework.jdbc.core.JdbcTemplate">
+                    <constructor-arg name="dataSource" ref="mySqlDataSource"></constructor-arg>
+                </bean>
+                 
+                
             </bean>
 
-            <!-- JdbcTemplate: for creation of statements and execution and handling SQL Exception -->
-            <bean id="" class="org.springframework.jdbc.core.JdbcTemplate">
-                    <constructor-arg name="dataSource" ref="mySqlDataSource"></constructor-arg>
+
+            <!-- Constructor Injection : SERVICE -->
+            <bean id="service" class="com.kharileigh.jdbcrefactoring.service.EmployeeServiceImpl">
+                <constructor-arg name="employeeDao" ref="dao"></constructor-arg>
+            </bean>
+
+            <!-- Setter Injection -->
+            <bean id="presentation" class="com.kharileigh.jdbcrefactoring.presentation.EmployeePresentationImpl">
+                <property name="employeeService" ref="service"></property>
             </bean>
 </beans>
+
+
+
+

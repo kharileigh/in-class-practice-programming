@@ -98,11 +98,14 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public int insertRecord(Employee employee) {
         
+        
         String query = "INSERT INTO EMPLOYEE VALUES(?,?,?,?,?,?)";
-        
+
         int rows = jdbcTemplate.update(query, employee.getEmpId(), employee.getEmpName(), employee.getEmpDesignation(), employee.getEmpDepartment(), employee.getEmpSalary(), employee.getDateOfJoining());
-        
+
         return rows;
+            
+     
     }
     
    

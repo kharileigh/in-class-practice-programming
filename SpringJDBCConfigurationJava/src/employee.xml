@@ -15,7 +15,7 @@
             <bean id="dao" class="com.kharileigh.jdbcrefactoring.persistence.EmployeeDaoImpl">
                 
                 <!-- DriverManagerDataSource : is responsible for creating connection and handling ClassNotFound and SqlException -->
-                <bean id="mySqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+                <bean id="MySqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
                     <!-- Replaces Class.forName in Dao Impl -->
                     <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>

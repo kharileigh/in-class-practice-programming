@@ -24,7 +24,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 
 
-@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 public class BookServiceImplTest {
     
     
@@ -39,6 +39,8 @@ public class BookServiceImplTest {
     
     @BeforeEach
     public void setUp() throws Exception {
+        
+        MockitoAnnotations.openMocks(this);
     
         autoCloseable = MockitoAnnotations.openMocks(this);
         

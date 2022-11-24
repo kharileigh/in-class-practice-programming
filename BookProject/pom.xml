@@ -14,14 +14,18 @@
     <build>
         <plugins> 
             <plugin>
+<!--            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M5</version>-->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M5</version>
+            <version>3.0.0-M7</version>
             <dependencies>
                 <dependency>
                     <groupId>org.junit.jupiter</groupId>
                     <artifactId>junit-jupiter-engine</artifactId>
-                    <version>5.5.2</version>
+                    <version>5.8.2</version>
+                    <scope>compile</scope>
                 </dependency>
             </dependencies>
         </plugin>
@@ -39,6 +43,12 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.24</version>
                 <scope>provided</scope>
+        </dependency>
+         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
         </dependency>
           <dependency>
                <groupId>org.junit.jupiter</groupId>

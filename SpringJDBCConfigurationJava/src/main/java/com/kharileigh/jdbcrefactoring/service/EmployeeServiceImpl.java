@@ -18,12 +18,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-@Service
+@Service("service")
 public class EmployeeServiceImpl implements EmployeeService {
     
         //Service will request persistence layer for all data needs
         @Autowired
 	private EmployeeDao employeeDao;
+        
+        // ARGS CONSTRUCTOR USING DAO AS ARGUMENT
+        public EmployeeServiceImpl(@Autowired EmployeeDao employeeDao) {
+            this.employeeDao = employeeDao;
+        }
 	
 	@Override
 	public Collection<Employee> getAllEmployees() {

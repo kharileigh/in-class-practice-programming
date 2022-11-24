@@ -21,7 +21,7 @@ import org.springframework.stereotype.Repository;
 
 
 
-@Repository
+@Repository("dao")
 public class EmployeeDaoImpl implements EmployeeDao {
     
     // PROPERTY FOR JDBC

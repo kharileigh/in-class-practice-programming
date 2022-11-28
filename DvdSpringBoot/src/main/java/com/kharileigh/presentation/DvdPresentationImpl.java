@@ -29,8 +29,9 @@ public class DvdPresentationImpl implements DvdPresentation {
         System.out.println("1. List All DVDs");
         System.out.println("2. Search DVD By ID");
         System.out.println("3. Search By DVD Release Date");
-        System.out.println("4. Add New DVD");
-        System.out.println("5. Exit");
+        System.out.println("4. Search Total DVD by Release Date : ");
+        System.out.println("5. Add New DVD");
+        System.out.println("6. Exit");
         System.out.println("=============================================");
     }
 
@@ -78,7 +79,15 @@ public class DvdPresentationImpl implements DvdPresentation {
                     }
                     break;
                     
-            case 4:
+            case 4 :
+                    System.out.println("Enter DVD Release Date (YYYY-MM-DD) : ");
+                    DateTimeFormatter dateFormatter = new DateTimeFormatterBuilder().parseCaseInsensitive().append(DateTimeFormatter.ofPattern("YYYY-MM-DD")).toFormatter();
+                    String rDate = sc.next().formatted(dateFormatter);
+                    
+                    int totalDvds = service.countDvdsByReleaseDate(rDate);
+                    System.out.println(totalDvds);
+                    break;
+            case 5:
                     Dvd newDvd = new Dvd();
                     
                     System.out.println("\nEnter DVD ID : ");
@@ -105,7 +114,7 @@ public class DvdPresentationImpl implements DvdPresentation {
                     }
                     break;
                     
-            case 5:
+            case 6:
                     System.out.println("Thank you for using DVD LIBRARY");
                     System.exit(0);
                     

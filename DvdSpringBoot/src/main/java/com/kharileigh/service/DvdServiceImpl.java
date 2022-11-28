@@ -44,6 +44,12 @@ public class DvdServiceImpl implements DvdService {
        
         return dao.findByReleaseDateGreaterThan(releaseDate);
     }
+
+    @Override
+    public int countDvdsByReleaseDate(String releaseDate) {
+        
+        return dao.countByReleaseDate(releaseDate);
+    }
     
     
     

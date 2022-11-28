@@ -20,4 +20,6 @@ public interface DvdService {
     
     List<Dvd> getDvdsByReleaseDate(String releaseDate);
     
+    int countDvdsByReleaseDate(String releaseDate);
+    
 }

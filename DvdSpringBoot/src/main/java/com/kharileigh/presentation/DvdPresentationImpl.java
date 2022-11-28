@@ -10,6 +10,7 @@ import com.kharileigh.service.DvdService;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.util.Collection;
+import java.util.List;
 import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -27,8 +28,9 @@ public class DvdPresentationImpl implements DvdPresentation {
         System.out.println("DVD LIBRARY");
         System.out.println("1. List All DVDs");
         System.out.println("2. Search DVD By ID");
-        System.out.println("3. Add New DVD");
-        System.out.println("4. Exit");
+        System.out.println("3. Search By DVD Release Date");
+        System.out.println("4. Add New DVD");
+        System.out.println("5. Exit");
         System.out.println("=============================================");
     }
 
@@ -59,7 +61,24 @@ public class DvdPresentationImpl implements DvdPresentation {
                     }
                     break;
                     
-            case 3:
+            case 3 :
+                    System.out.println("Enter DVD Release Date (YYYY-MM-DD) : ");
+                    DateTimeFormatter dateF = new DateTimeFormatterBuilder().parseCaseInsensitive().append(DateTimeFormatter.ofPattern("YYYY-MM-DD")).toFormatter();
+                    String date = sc.next().formatted(dateF);
+                    
+                    List<Dvd> dvdReleaseDate = service.getDvdsByReleaseDate(date);
+                    
+                    if(dvdReleaseDate.size() != 0) {
+                        for(Dvd r : dvdReleaseDate){
+                            System.out.println(r);
+                        }
+
+                    } else {
+                        System.out.println("No DVD with Release Date after : " + date);
+                    }
+                    break;
+                    
+            case 4:
                     Dvd newDvd = new Dvd();
                     
                     System.out.println("\nEnter DVD ID : ");
@@ -86,7 +105,7 @@ public class DvdPresentationImpl implements DvdPresentation {
                     }
                     break;
                     
-            case 4:
+            case 5:
                     System.out.println("Thank you for using DVD LIBRARY");
                     System.exit(0);
                     

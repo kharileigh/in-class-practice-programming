@@ -8,6 +8,7 @@ package com.kharileigh.service;
 import com.kharileigh.entity.Dvd;
 import com.kharileigh.persistence.DvdDao;
 import java.util.Collection;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +38,13 @@ public class DvdServiceImpl implements DvdService {
             return false;
         }
     }
+
+    @Override
+    public List<Dvd> getDvdsByReleaseDate(String releaseDate) {
+       
+        return dao.findByReleaseDateGreaterThan(releaseDate);
+    }
+    
+    
     
 }

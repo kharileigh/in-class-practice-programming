@@ -62,22 +62,27 @@ public class DvdPresentationImpl implements DvdPresentation {
             case 3:
                     Dvd newDvd = new Dvd();
                     
-                    System.out.println("Enter DVD ID : ");
+                    System.out.println("\nEnter DVD ID : ");
                     newDvd.setDvdId(sc.nextInt());
                     
-                    System.out.println("Enter DVD Title : ");
-                    newDvd.setTitle(sc.next());
+                    sc.nextLine(); // clearing the buffer
+                    System.out.println("\nEnter DVD Title : ");
+                    newDvd.setTitle(sc.nextLine());
                     
-                    System.out.println("Enter DVD Release Date (YYYY-MM-DD) : ");
-                    
+                    System.out.println("\nEnter DVD Release Date (YYYY-MM-DD) : ");
                     DateTimeFormatter df = new DateTimeFormatterBuilder().parseCaseInsensitive().append(DateTimeFormatter.ofPattern("YYYY-MM-DD")).toFormatter();
+                    newDvd.setReleaseDate(sc.nextLine().formatted(df));
                     
-                    newDvd.setReleaseDate(sc.next().formatted(df));
+                    System.out.println("\nEnter Director's Name : ");
+                    newDvd.setDirector(sc.nextLine());
+                    
+                    System.out.println("\nEnter Production Studio : ");
+                    newDvd.setStudio(sc.nextLine());
                     
                     if(service.addDvd(newDvd)) {
-                        System.out.println("DVD ADDED TO LIBRARY");
+                        System.out.println("\nDVD ADDED TO LIBRARY");
                     } else {
-                        System.out.println("DVD with ID : " + newDvd.getDvdId() + " already exists in DVD Library, so cannot be added.");
+                        System.out.println("\nDVD with ID : " + newDvd.getDvdId() + " already exists in DVD Library, so cannot be added.");
                     }
                     break;
                     

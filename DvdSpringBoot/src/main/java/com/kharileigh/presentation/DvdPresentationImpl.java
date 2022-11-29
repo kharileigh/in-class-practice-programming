@@ -87,6 +87,7 @@ public class DvdPresentationImpl implements DvdPresentation {
                     int totalDvds = service.countDvdsByReleaseDate(rDate);
                     System.out.println(totalDvds);
                     break;
+                    
             case 5:
                     Dvd newDvd = new Dvd();
                     

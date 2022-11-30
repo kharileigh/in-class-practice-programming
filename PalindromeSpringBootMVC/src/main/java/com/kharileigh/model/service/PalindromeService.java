@@ -24,19 +24,15 @@ public class PalindromeService {
     
     // GETTER - check if number is palindrome or not (calls function to check, then returns true or false)
     public boolean isPalindrome(int number) {
-        calculatePalindrome();
-        return palindrome;
-    }
-    
-    // METHOD TO CALCULATE 
-    private void calculatePalindrome() {
-        
-        while(number > 0) {
+         while(number > 0) {
             
             int remainder = number % 10;
             mirroredNum = mirroredNum * 10 + remainder;
             number = number / 10;
         }
+        return palindrome;
     }
+    
+    
    
 }

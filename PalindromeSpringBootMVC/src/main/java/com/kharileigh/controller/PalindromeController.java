@@ -28,13 +28,20 @@ public class PalindromeController {
     }
     
     // 2nd View - Palindrome
-    @RequestMapping("calculate")
+    @RequestMapping("/calculate")
     public ModelAndView palindromeController(HttpServletRequest request) {
     
         ModelAndView modelAndView = new ModelAndView();
         
         int inputNum = Integer.parseInt(request.getParameter("number"));
         boolean palindrome = service.isPalindrome(inputNum);
+        
+        if(palindrome == true) {
+            System.out.println("This number is a Palindrome");
+        } else {
+            System.out.println("This number is NOT a Palindrome");
+        }
+        
         
         modelAndView.addObject("palin", palindrome);
         modelAndView.setViewName("Output");
